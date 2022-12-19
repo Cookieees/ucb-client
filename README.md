@@ -22,7 +22,7 @@ https://build-api.cloud.unity3d.com/api/v1/api.json
 The Unity Cloud Build API requires an access token from your Unity Cloud Build account, which can be found by selecting 
 **Settings** under **DevOps > Cloud Build** at https://dashboard.unity3d.com/cloud-build
 To authenticate requests, include a Basic Authentication header with your API key as the value. e.g.  
-```json
+```any
 Authorization: Basic [YOUR API KEY] 
 ```
 
@@ -32,7 +32,7 @@ Paged results will take two parameters. A page number that is calculated based u
 there are 40 results and you specify page 2 with per_page set to 10 you will receive records 11-20. Paged results will
 also return a Content-Range header. For the example above the content range header would look like
 this:
-```json
+```any
 Content-Range: items 11-20/40 
 ```
 
@@ -79,7 +79,7 @@ You can check the returned HTTP headers for any API request to see your current 
 
 Once you go over the rate limit you will receive an error
 response: 
-```json
+```any
 HTTP Status: 429 
 {
   "error": "Rate limit exceeded, retry in XX seconds" 
