@@ -106,11 +106,15 @@ Python 2.7 and 3.4+
 You can install the package directly from __GitHub__
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/Cookieees/ucb-client.git
 ```
-(you may need to run `pip` with root permission: 
+you may need to run `pip` with root permission: 
 ```sh
-sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+sudo pip install git+https://github.com/Cookieees/ucb-client.git
+```
+Alternatively, you can use pypi storage: 
+```sh
+pip install ucb-client
 ```
 
 Then import the package:
@@ -143,11 +147,14 @@ from pprint import pprint
 
 # Configure HTTP basic authorization: apikey
 configuration = ucb_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-# Configure OAuth2 access token for authorization: permissions
+configuration.api_key = 'YOUR_API_KEY'
+# Configure HTTP basic authorization: access_token
 configuration = ucb_client.Configuration()
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
+# Configure OAuth2 access token for authorization: permissions
+configuration = ucb_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = ucb_client.BillingApi(ucb_client.ApiClient(configuration))
