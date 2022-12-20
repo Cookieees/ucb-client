@@ -235,26 +235,19 @@ class Configuration(object):
         :return: The Auth Settings information dict.
         """
         return {
+            'filetoken':
+                {
+                    'type': 'oauth2',
+                    'in': 'header',
+                    'key': 'Authorization',
+                    'value': self.get_basic_auth_token()
+                },
             'apikey':
                 {
                     'type': 'basic',
                     'in': 'header',
                     'key': 'Authorization',
                     'value': 'Basic ' + self.api_key
-                },
-            'filetoken':
-                {
-                    'type': 'oauth2',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': 'Bearer ' + self.access_token
-                },
-            'permissions':
-                {
-                    'type': 'basic',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': self.get_basic_auth_token()
                 },
         }
 

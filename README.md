@@ -150,9 +150,6 @@ configuration = ucb_client.Configuration()
 configuration.api_key = 'YOUR_API_KEY'
 # Configure HTTP basic authorization: access_token
 configuration = ucb_client.Configuration()
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-# Configure OAuth2 access token for authorization: permissions
-configuration = ucb_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
@@ -347,9 +344,6 @@ All URIs are relative to *https://localhost/api/v1*
 - **Type**: HTTP basic authentication
 ## filetoken
 
-- **Type**: HTTP basic authentication
-## permissions
-
 - **Type**: OAuth
 - **Flow**: implicit
 - **Authorization URL**: https://build.cloud.unity3d.com/login/
@@ -360,7 +354,8 @@ All URIs are relative to *https://localhost/api/v1*
  - **project:manager**: must have at least manager permissions in the project
  - **admin**: administrative privileges
  - **admin_readstats**: administrative read stats privileges
-## Author
+
+### Author Artem Gusintsev
 
 
 
