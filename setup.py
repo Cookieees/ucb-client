@@ -5,7 +5,7 @@ from os import path
 
 
 NAME = "ucb-client"
-VERSION = "22.6.12"
+VERSION = "22.7.12"
 BASE_PATH = path.abspath(path.dirname(__file__))
 # To install the library, run the following
 #
